@@ -9,9 +9,9 @@ The default config works off of the [LostMons Addon](https://modrinth.com/datapa
 
 ```JSON
 {
-	"spawnAspects": {
-		"is_antique": 0.5
-	}
+  "spawnAspects": {
+    "is_antique": 0.5
+  }
 }
 ```
 
@@ -21,9 +21,9 @@ For example, let's say our Sinistea could have both `is_antique` and a `red` asp
 
 ```JSON
 {
-	"spawnAspects": {
-		"is_antique": 0.5,
+  "spawnAspects": {
+    "is_antique": 0.5,
     "red": 0.25
-	}
+  }
 }
 ```
