@@ -1,12 +1,14 @@
 package us.timinc.mc.cobblemon.shinyesques.config
 
-import me.shedaniel.autoconfig.ConfigData
-import me.shedaniel.autoconfig.annotation.Config
+import draylar.omegaconfig.api.Config
 import us.timinc.mc.cobblemon.shinyesques.Shinyesques
 
-@Config(name = Shinyesques.MOD_ID)
-class ShinyesquesConfig : ConfigData {
+class ShinyesquesConfig : Config {
     val spawnAspects = mutableMapOf(
         "is_antique" to 1.0
     )
+
+    override fun getName(): String {
+        return Shinyesques.MOD_ID
+    }
 }
