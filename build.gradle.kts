@@ -1,7 +1,7 @@
 plugins {
     id("java")
-    id("dev.architectury.loom") version("0.12.0-SNAPSHOT")
-    id("architectury-plugin") version("3.4-SNAPSHOT")
+    id("dev.architectury.loom") version ("0.12.0-SNAPSHOT")
+    id("architectury-plugin") version ("3.4-SNAPSHOT")
     kotlin("jvm") version ("1.8.10")
 }
 
@@ -25,8 +25,7 @@ repositories {
     mavenCentral()
     maven(url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
     maven("https://maven.impactdev.net/repository/development/")
-    maven(url = uri("https://maven.shedaniel.me/"))
-    maven( url = "https://maven.terraformersmc.com/releases/" )
+    maven(url = "https://maven.draylar.dev/releases")
 }
 
 dependencies {
@@ -43,7 +42,9 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-    modApi("me.shedaniel.cloth:cloth-config-fabric:8.3.103")
+
+    include("dev.draylar.omega-config:omega-config-base:1.3.0+1.19.2")
+    modImplementation("dev.draylar.omega-config:omega-config-base:1.3.0+1.19.2")
 }
 
 tasks.getByName<Test>("test") {
